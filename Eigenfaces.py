@@ -101,9 +101,6 @@ if img is not None:
 
     st.sidebar.image(img, width=120, caption="Test face")
 
-    st.subheader("Uploaded Image")
-    st.image(img, width=64)
-
     test = pca.transform(img.reshape(1, -1))
     test = test/np.sqrt(np.sum(np.square(test), axis = 1, keepdims = True))
 
